@@ -60,7 +60,7 @@ dotnet-sce --help
 #### Installation
 
 ```bash
-git clone https://github.com/yourusername/dotnet-sce.git
+git clone https://github.com/stolenfootball/dotnet-sce.git
 cd dotnet-sce
 uv pip install -e .
 ```
@@ -137,20 +137,6 @@ The project follows a modular design:
 - `cli.py` — Command-line argument parsing and orchestration
 
 All modules follow Google Python style conventions and include comprehensive docstrings.
-
-## Testing
-
-Run the included test suite:
-
-```bash
-uv run pytest
-```
-
-Test the tool with the sample bundle:
-
-```bash
-uv run dotnet-sce samples/WinChatClient.exe samples_out
-```
 
 ## Limitations
 
