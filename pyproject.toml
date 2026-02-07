@@ -1,0 +1,25 @@
+[project]
+name = "dotnet-sce"
+version = "0.1.0"
+description = "A small Python project to extract resources and code from self contained .NET executables."
+readme = "README.md"
+authors = [
+    { name = "Jeremy Dunn", email = "jeremy.dunn315@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+# CLI entrypoint -> dotnet_sce.cli:main
+dotnet-sce = "dotnet_sce.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# For src-layout: specify the full path to the package
+packages = ["src/dotnet_sce"]
